@@ -4,24 +4,34 @@ Skills for Claude Code from a solo founder shipping B2C apps. Built while runnin
 
 ## What's inside
 
+Two plugins. Install one or both.
+
+**`fstack`**: works in any codebase.
+
 | Skill | Loads when you are |
 |---|---|
 | `engineering-principles` | planning, debugging, refactoring or reviewing code |
 | `design-standards` | designing any screen, flow or interaction |
 | `copywriting-rules` | writing anything a user reads |
+| `/in-your-own-words` | typing it, to check the agent understood your goal |
+
+**`fstack-mobile`**: for B2C mobile apps.
+
+| Skill | Loads when you are |
+|---|---|
 | `mobile-onboarding-paywall` | building onboarding, a paywall, or a review prompt |
 | `in-app-premium-gating` | adding a locked feature or upgrade prompt |
 | `subscription-winback` | building a cancel flow or retention offer |
 | `expo-react-native` | working in an Expo or React Native app |
-| `in-your-own-words` | typing `/in-your-own-words` to check the agent understood your goal |
 
-Skills load only when the task calls for them, so they cost nothing the rest of the time.
+Rules load themselves when the task calls for them. Checks wait for you to type them.
 
 ## Install
 
 ```
 /plugin marketplace add fabiojonathanarifin/fstack
 /plugin install fstack@fstack
+/plugin install fstack-mobile@fstack
 ```
 
 ## A few rules worth knowing

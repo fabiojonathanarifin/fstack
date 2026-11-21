@@ -5,15 +5,19 @@
     "url": "https://github.com/fabiojonathanarifin"
   },
   "metadata": {
-    "description": "Skills for indie founders shipping B2C apps.",
-    "version": "0.1.0",
-    "repository": "https://github.com/fabiojonathanarifin/fstack"
+    "description": "Skills for indie founders: a product-agnostic core and a B2C mobile pack.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "fstack",
-      "description": "Engineering, design, copy and mobile monetization skills for indie founders.",
-      "source": "./"
+      "description": "Engineering judgment, premium design and copy that doesn't read as AI. Product-agnostic skills for any codebase, plus /in-your-own-words.",
+      "source": "./plugins/fstack"
+    },
+    {
+      "name": "fstack-mobile",
+      "description": "Playbooks that make a B2C mobile app earn money: onboarding, paywall, review-prompt timing, premium gating, cancellation win-back, and Expo / React Native gotchas.",
+      "source": "./plugins/fstack-mobile"
     }
   ]
 }

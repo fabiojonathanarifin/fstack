@@ -42,7 +42,7 @@ If you can derive it, don't ask for it. If you can infer it, don't make them typ
 - Smart defaults > blank slates. Pre-select the most common option, let them change it.
 
 ### Motion on React Native
-The Reanimated motion stack and the bottom-sheet pattern are in the `expo-react-native` skill. Never springs, on any platform.
+Never springs, on any platform. On React Native, the `expo-react-native` skill in fstack-mobile has the Reanimated motion stack and the bottom-sheet pattern.
 
 ## Experience Design: Build Experiences, Not Screens
 

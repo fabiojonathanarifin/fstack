@@ -1,0 +1,13 @@
+{
+  "name": "fstack-mobile",
+  "description": "Playbooks that make a B2C mobile app earn money: onboarding, paywall, review-prompt timing, premium gating, cancellation win-back, and Expo / React Native gotchas.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Fabio Jonathan Arifin",
+    "url": "https://github.com/fabiojonathanarifin"
+  },
+  "homepage": "https://github.com/fabiojonathanarifin/fstack",
+  "repository": "https://github.com/fabiojonathanarifin/fstack",
+  "license": "MIT",
+  "skills": "./skills"
+}
