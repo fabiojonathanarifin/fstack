@@ -37,6 +37,8 @@ Skills load on demand. If you want the core principles in every session, paste t
 
 ```markdown
 - Design for the scale the product implies, not the toy example in front of you.
+- Touch only what the task needs. Don't tidy nearby code on the way past.
+- Define the check before coding, and show its output when reporting done.
 - When two fixes that share one assumption fail, write the assumption down and test it before a third fix.
 - Before trusting a number, name what limits it and rule out that it measured something else.
 - Fix where the system first went wrong. A guard on a state that should never exist hides the bug.

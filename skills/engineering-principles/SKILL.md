@@ -1,6 +1,6 @@
 ---
 name: engineering-principles
-description: Architecture-first engineering judgment for any codebase: design for the scale the product implies, recognize recurring-bug smells, attack the premise, explain the number, build the lever, fix root causes, model the domain, minimize reader load, error handling at the edges, and critical-path testing. Use when planning a feature, debugging, refactoring, or reviewing code.
+description: Architecture-first engineering judgment for any codebase: design for the scale the product implies, recognize recurring-bug smells, attack the premise, explain the number, build the lever, fix root causes, model the domain, minimize reader load, surgical changes, stating assumptions, defining the check first, matching speed to reversibility, safe retries, error handling at the edges, and critical-path testing. Use when planning a feature, debugging, refactoring, or reviewing code.
 ---
 
 # Engineering principles
@@ -21,6 +21,11 @@ Before diving into a fix, step back and ask whether the DESIGN is right, not jus
 - **Suspect the check before the system.** When a verification fails or contradicts itself, first rule out that you checked the wrong thing (stale cache, wrong environment, proxy signal) before changing code.
 - **Model the domain in data, not branches.** Reach for a state machine, lookup table or typed model instead of scattered booleans and growing if/else chains. The warning sign is a second boolean that must stay in sync with the first. Keep boring code when the shape is small and local.
 - **Minimize reader load.** Inline wrappers with one caller and adapters with one implementation. Derive values instead of syncing copies. A new reader should find where a value comes from and what can change it in under 30 seconds.
+- **Surgical changes.** Touch only what the task needs. Match the existing style. Don't "improve" nearby code, comments or formatting on the way past. Remove imports, variables and files your own change left unused; flag old dead code instead of deleting it unasked.
+- **State assumptions before coding.** Say what you are assuming and name any other reading of the request instead of silently picking one. On reversible work, state it and proceed; on anything irreversible or genuinely ambiguous, ask first.
+- **Define the check first, then show evidence.** Turn the task into a verifiable goal before writing code ("fix the bug" becomes "a test that reproduces it fails, then passes"). When reporting done, show the test output, command result or screenshot, not just a claim.
+- **Match speed to reversibility.** Move fast on changes that are easy to undo. Slow down on one-way doors: schema migrations, money movement, deletes, anything sent to users. Ship in small batches so each change is easy to review and roll back.
+- **Make retries safe.** Webhooks, payment events, jobs and lifecycle steps can run twice or crash halfway. Running them again must end in the same state: key on an event or request id, check before acting, never assume exactly-once delivery.
 - **This is not a license to overengineer.** Architecture-level thinking means choosing the RIGHT altitude for the real requirements, not gold-plating for imaginary ones. The test: am I designing for a scale or need the product actually implies, or for a hypothetical no evidence supports? The former is required; the latter is the YAGNI violation. Both failure modes (patching too local, abstracting too early) come from not seeing the actual picture.
 
 ## Error Handling - Try/Catch Everywhere
@@ -69,12 +74,12 @@ const ProfileScreen = () => {
 
 ## Code Quality Principles
 
-### DRY (Don't Repeat Yourself) - Always
+### DRY (Don't Repeat Yourself) - One Source of Truth
 ```javascript
-// ✅ Always DRY by default - extract shared logic into reusable functions/components
-// ✅ If you write the same pattern twice, extract it immediately
+// ✅ One source of truth for every decision, constant and business rule (prices, limits, IDs)
+// ✅ Extract shared logic on the third copy, or the second when the copies must change together
 // ✅ Shared constants, helpers, and utilities belong in dedicated files
-// ✅ When in doubt, DRY it out
+// ✅ Two similar-looking blocks that change for different reasons are not duplication; leave them
 // ❌ Never duplicate logic across files - find the existing implementation and reuse it
 // ❌ Never copy-paste code blocks between components - extract a shared function
 ```
