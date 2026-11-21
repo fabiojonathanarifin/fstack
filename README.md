@@ -1,6 +1,6 @@
 # fstack
 
-Skills for Claude Code from a solo founder shipping B2C apps. Each rule came from a real launch, a rejection, or a bug that cost a day.
+Skills for Claude Code from a solo founder shipping B2C apps. Built while running EchoForge, maker of Protos, Airlophone and ReadersGuild. Each rule came from a real launch, a rejection, or a bug that cost a day.
 
 ## What's inside
 
@@ -20,7 +20,7 @@ Skills load only when the task calls for them, so they cost nothing the rest of 
 ## Install
 
 ```
-/plugin marketplace add OWNER/fstack
+/plugin marketplace add fabiojonathanarifin/fstack
 /plugin install fstack@fstack
 ```
 

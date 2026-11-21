@@ -1,11 +1,19 @@
 {
   "name": "fstack",
-  "owner": { "name": "EchoForge" },
+  "owner": {
+    "name": "Fabio Jonathan Arifin",
+    "url": "https://github.com/fabiojonathanarifin"
+  },
   "metadata": {
     "description": "Skills for indie founders shipping B2C apps.",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "repository": "https://github.com/fabiojonathanarifin/fstack"
   },
   "plugins": [
-    { "name": "fstack", "description": "Engineering, design, copy and mobile monetization skills for indie founders.", "source": "./" }
+    {
+      "name": "fstack",
+      "description": "Engineering, design, copy and mobile monetization skills for indie founders.",
+      "source": "./"
+    }
   ]
 }
