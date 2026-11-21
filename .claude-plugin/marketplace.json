@@ -1,0 +1,11 @@
+{
+  "name": "fstack",
+  "owner": { "name": "EchoForge" },
+  "metadata": {
+    "description": "Skills for indie founders shipping B2C apps.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    { "name": "fstack", "description": "Engineering, design, copy and mobile monetization skills for indie founders.", "source": "./" }
+  ]
+}

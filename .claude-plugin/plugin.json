@@ -1,0 +1,8 @@
+{
+  "name": "fstack",
+  "description": "Skills for indie founders shipping B2C apps: engineering judgment, premium design, copy that doesn't read as AI, and the onboarding, paywall, gating and win-back playbooks that make a mobile app earn money.",
+  "version": "0.1.0",
+  "author": { "name": "EchoForge" },
+  "license": "MIT",
+  "skills": "./skills"
+}
