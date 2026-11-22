@@ -2,6 +2,8 @@
 
 Skills for Claude Code from a solo founder shipping B2C apps. Built while running EchoForge, maker of Protos, Airlophone and ReadersGuild. Each rule came from a real launch, a rejection, or a bug that cost a day.
 
+New here? Read the [one-page guide](GUIDE.md).
+
 ## What's inside
 
 Two plugins. Install one or both.
@@ -15,6 +17,7 @@ Two plugins. Install one or both.
 | `copywriting-rules` | writing anything a user reads |
 | `/in-your-own-words` | typing it, to check the agent understood your goal |
 | `blast-radius` | about to ship a change to money, auth, data or anything shared |
+| `perf-investigation` | fixing anything slow; measures first, changes one thing, re-measures |
 | `decision-log` | running long or unattended work you'll review later |
 | `/create-verification-skill` | setting up a repo so agents can drive and prove the real app (web or mobile) |
 | `/maintain-verification-skill` | keeping that app's feature map accurate as it changes |

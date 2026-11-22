@@ -1,6 +1,6 @@
 ---
 name: engineering-principles
-description: Architecture-first engineering judgment for any codebase: design for the scale the product implies, recognize recurring-bug smells, attack the premise, explain the number, build the lever, fix root causes, model the domain, minimize reader load, surgical changes, stating assumptions, defining the check first, matching speed to reversibility, safe retries, error handling at the edges, and critical-path testing. Use when planning a feature, debugging, refactoring, or reviewing code.
+description: Architecture-first engineering judgment for any codebase: design for the scale the product implies, recognize recurring-bug smells, attack the premise, explain the number, build the lever, fix root causes, model the domain, minimize reader load, test behavior not implementation, replace then delete, validate at the edges, make bad states hard to write, separate before you lock, prototype the fork, protect the main context, surgical changes, stating assumptions, defining the check first, matching speed to reversibility, safe retries, error handling at the edges, and critical-path testing. Use when planning a feature, debugging, refactoring, or reviewing code.
 ---
 
 # Engineering principles
@@ -27,6 +27,13 @@ Before diving into a fix, step back and ask whether the DESIGN is right, not jus
 - **Define the check first, then show evidence.** Turn the task into a verifiable goal before writing code ("fix the bug" becomes "a test that reproduces it fails, then passes"). When reporting done, show the test output, command result or screenshot, not just a claim.
 - **Match speed to reversibility.** Move fast on changes that are easy to undo. Slow down on one-way doors: schema migrations, money movement, deletes, anything sent to users. Ship in small batches so each change is easy to review and roll back.
 - **Make retries safe.** Webhooks, payment events, jobs and lifecycle steps can run twice or crash halfway. Running them again must end in the same state: key on an event or request id, check before acting, never assume exactly-once delivery.
+- **Test behavior, not implementation.** Assert what a user or caller can observe. A test that still passes when the behavior breaks, or fails when only internals change, gets fixed or deleted.
+- **Replace, then delete.** When a new API or pattern replaces an old one, move every caller and delete the old one in the same change. Two ways to do one thing is how agents copy the wrong one.
+- **Validate at the edges.** Parse and check outside input (requests, webhooks, env vars, third-party responses) where it enters. Inside the app, trust it. No defensive checks sprinkled through the middle.
+- **Make bad states hard to write.** In TypeScript, use unions and branded IDs so an invalid state doesn't compile. In JavaScript, give each important object one create or parse function and make it the only way in.
+- **Separate before you lock.** When two jobs, requests or agents can write the same thing, remove the sharing first (one owner, per-item keys) before reaching for locks or retries.
+- **Prototype the fork.** For a new UX or architecture decision with no precedent, build two or three quick throwaway versions and compare them before committing to one.
+- **Protect the main context.** Send bulky reading (long logs, many files, transcripts) to a subagent and keep only its conclusion.
 - **This is not a license to overengineer.** Architecture-level thinking means choosing the RIGHT altitude for the real requirements, not gold-plating for imaginary ones. The test: am I designing for a scale or need the product actually implies, or for a hypothetical no evidence supports? The former is required; the latter is the YAGNI violation. Both failure modes (patching too local, abstracting too early) come from not seeing the actual picture.
 
 ## Error Handling - Try/Catch Everywhere
