@@ -1,11 +1,11 @@
-# fstack in one page
+# foolstack in one page
 
 ## Install
 
 ```
-/plugin marketplace add fabiojonathanarifin/fstack
-/plugin install fstack@fstack          # any codebase
-/plugin install fstack-mobile@fstack   # B2C mobile apps
+/plugin marketplace add fabiojonathanarifin/foolstack
+/plugin install foolstack@foolstack          # any codebase
+/plugin install foolstack-mobile@foolstack   # B2C mobile apps
 ```
 
 ## How it works

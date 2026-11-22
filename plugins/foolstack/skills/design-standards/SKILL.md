@@ -22,7 +22,7 @@ Every animation must communicate something: state change, hierarchy, causality. 
 - **Functional animation** — fill a ring to show goal progress. Stagger checklist ticks to show work being done. Animate day dots in sequence to show a schedule being built. The animation *is* the communication.
 
 ### Haptics — Mirror the Visual Moment
-Haptics should fire exactly when the visual state changes — not before, not after.
+On platforms with haptics (iOS, Android, some trackpads), they fire exactly when the visual state changes, not before, not after.
 
 - Pair every meaningful visual event with a haptic: tap → select, item checks off → impact, flow completes → notification
 - **Progressive intensity** — if the experience builds (checklist filling, streak milestone), escalate haptic weight: Light → Light → Medium → Heavy
@@ -42,7 +42,7 @@ If you can derive it, don't ask for it. If you can infer it, don't make them typ
 - Smart defaults > blank slates. Pre-select the most common option, let them change it.
 
 ### Motion on React Native
-Never springs, on any platform. On React Native, the `expo-react-native` skill in fstack-mobile has the Reanimated motion stack and the bottom-sheet pattern.
+Never springs, on any platform. On React Native, the `expo-react-native` skill in foolstack-mobile has the Reanimated motion stack and the bottom-sheet pattern.
 
 ## Experience Design: Build Experiences, Not Screens
 

@@ -1,5 +1,5 @@
 {
-  "name": "fstack",
+  "name": "foolstack",
   "owner": {
     "name": "Fabio Jonathan Arifin",
     "url": "https://github.com/fabiojonathanarifin"
@@ -10,14 +10,14 @@
   },
   "plugins": [
     {
-      "name": "fstack",
+      "name": "foolstack",
       "description": "Engineering judgment, premium design and copy that doesn't read as AI. Product-agnostic skills for any codebase, plus /in-your-own-words.",
-      "source": "./plugins/fstack"
+      "source": "./plugins/foolstack"
     },
     {
-      "name": "fstack-mobile",
+      "name": "foolstack-mobile",
       "description": "Playbooks that make a B2C mobile app earn money: onboarding, paywall, review-prompt timing, premium gating, cancellation win-back, and Expo / React Native gotchas.",
-      "source": "./plugins/fstack-mobile"
+      "source": "./plugins/foolstack-mobile"
     }
   ]
 }

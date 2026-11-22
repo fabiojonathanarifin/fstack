@@ -1,4 +1,4 @@
-"""fstack eval: runs each task twice, with your normal Claude Code setup and with --safe-mode
+"""foolstack eval: runs each task twice, with your normal Claude Code setup and with --safe-mode
 (no CLAUDE.md, skills or plugins), then checks the output files automatically.
 
     python3 eval.py                 # all tasks
@@ -148,7 +148,7 @@ def run(task, cond):
                 loaded=any(s.split(':')[-1] in task['skills'] for s in skills), cost=cost)
 if __name__ == '__main__':
     only = [a for a in sys.argv[1:] if not a.startswith('--')]
-    jobs = [(t,c) for t in T for c in ('fstack','baseline') if not only or t['id'] in only]
+    jobs = [(t,c) for t in T for c in ('with','baseline') if not only or t['id'] in only]
     with cf.ThreadPoolExecutor(4) as ex:
         res = list(ex.map(lambda tc: run(*tc), jobs))
     out = E/('results-smoke.json' if only else 'results.json'); out.write_text(json.dumps(res, indent=2))

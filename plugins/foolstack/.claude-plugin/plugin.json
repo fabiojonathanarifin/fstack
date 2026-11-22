@@ -1,13 +1,13 @@
 {
-  "name": "fstack",
+  "name": "foolstack",
   "description": "Engineering judgment, premium design and copy that doesn't read as AI. Product-agnostic skills for any codebase, plus /in-your-own-words.",
   "version": "0.2.0",
   "author": {
     "name": "Fabio Jonathan Arifin",
     "url": "https://github.com/fabiojonathanarifin"
   },
-  "homepage": "https://github.com/fabiojonathanarifin/fstack",
-  "repository": "https://github.com/fabiojonathanarifin/fstack",
+  "homepage": "https://github.com/fabiojonathanarifin/foolstack",
+  "repository": "https://github.com/fabiojonathanarifin/foolstack",
   "license": "MIT",
   "skills": "./skills"
 }

@@ -36,20 +36,13 @@ Before diving into a fix, step back and ask whether the DESIGN is right, not jus
 - **Protect the main context.** Send bulky reading (long logs, many files, transcripts) to a subagent and keep only its conclusion.
 - **This is not a license to overengineer.** Architecture-level thinking means choosing the RIGHT altitude for the real requirements, not gold-plating for imaginary ones. The test: am I designing for a scale or need the product actually implies, or for a hypothetical no evidence supports? The former is required; the latter is the YAGNI violation. Both failure modes (patching too local, abstracting too early) come from not seeing the actual picture.
 
-## Error Handling - Try/Catch Everywhere
+## Error Handling
 Catch to log and re-throw inside the app; decide what the user sees only at the edges (API routes, UI handlers, jobs). Never swallow an error, return a fake default, or retry silently in the middle: that hides the bug instead of handling it.
 ```javascript
 // ✅ Always wrap async calls
 const fetchUserProfile = async (userId) => {
   try {
-    const { data, error } = await supabase
-      .from('users')
-      .select()
-      .eq('id', userId)
-      .single();
-    
-    if (error) throw error;
-    return data;
+    return await db.users.findById(userId);
   } catch (error) {
     console.error('Failed to fetch user profile:', error);
     throw error; // Re-throw for caller to handle
@@ -99,8 +92,8 @@ const useAuth = () => {
   const [user, setUser] = useState(null);
   
   const login = async (email, password) => {
-    const { data } = await supabase.auth.signInWithPassword({ email, password });
-    setUser(data.user);
+    const session = await auth.signIn(email, password);
+    setUser(session.user);
   };
   
   return { user, login };
@@ -122,12 +115,8 @@ const saveUserPreferences = async (prefs) => {
     // Validate data shape before saving
     const validated = validatePreferences(prefs);
     
-    // Use upsert to handle new and existing users
-    const { error } = await supabase
-      .from('user_preferences')
-      .upsert(validated, { onConflict: 'user_id' });
-    
-    if (error) throw error;
+    // Upsert so new and existing users take the same path
+    await db.userPreferences.upsert(validated, { key: 'userId' });
   } catch (error) {
     console.error('Failed to save preferences:', error);
     throw error;
@@ -138,9 +127,9 @@ const saveUserPreferences = async (prefs) => {
 const saveUserPreferences = async (prefs) => {
   // Just try again if it fails (doesn't address WHY it failed)
   try {
-    await supabase.from('user_preferences').insert(prefs);
+    await db.userPreferences.insert(prefs);
   } catch {
-    await supabase.from('user_preferences').insert(prefs);
+    await db.userPreferences.insert(prefs);
   }
 };
 ```

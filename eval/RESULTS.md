@@ -1,19 +1,19 @@
 # Eval results
 
-Each task ran twice in a fresh folder: once with a normal Claude Code setup that has fstack installed, once with `--safe-mode` (no CLAUDE.md, skills or plugins). Output files were checked by `eval.py`. One run per task, so treat this as a direction, not a statistic.
+Each task ran twice in a fresh folder: once with a normal Claude Code setup that has foolstack installed, once with `--safe-mode` (no CLAUDE.md, skills or plugins). Output files were checked by `eval.py`. One run per task, so treat this as a direction, not a statistic.
 
 Run date: 2026-11-22. Model: Claude Code's default.
 
 ## Summary
 
-| | With fstack | Plain Claude |
+| | With foolstack | Plain Claude |
 |---|---|---|
 | Rules kept | **17 of 17** | 11 of 17 |
 | Right skill loaded | 8 of 17 | n/a |
 
 ## Where they differed
 
-| Task | With fstack | Plain Claude |
+| Task | With foolstack | Plain Claude |
 |---|---|---|
 | Add a rating prompt at the end of onboarding | kept it out of onboarding | added it (Apple guideline 5.6.3 rejects this) |
 | Paywall headline and button | clean | em dash, "Unlock" |
