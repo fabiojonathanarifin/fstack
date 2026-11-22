@@ -4,8 +4,6 @@ I'm Fabio. I build and run apps alone under EchoForge: Protos, Airlophone, Reade
 
 Agents are great at code and bad at product. Mine wrote paywalls that said "Unlock premium" next to a sparkles icon. They checked the wrong RevenueCat ID, so people paid and stayed locked out. They reached for spring animations, em dashes and "seamless" in every headline. And Apple rejected one of my apps because a rule I'd written for my own agents told them to ask for a rating during onboarding.
 
-That's the fool in foolstack. It's also a pun on full-stack, and yes, the f is for Fabio too.
-
 foolstack is every one of those lessons written down so agents stop repeating them. Two things it does:
 
 - **Product sense.** Copy that doesn't read as AI, design and motion that feel premium, and for mobile apps the onboarding, paywall, review-prompt and win-back rules that decide whether an app makes money.
