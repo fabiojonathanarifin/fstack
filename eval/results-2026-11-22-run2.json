@@ -1,0 +1,98 @@
+[
+  {
+    "task": "root-not-guard",
+    "cond": "fstack",
+    "ok": true,
+    "why": "looked up by sku, no guard",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3111946
+  },
+  {
+    "task": "root-not-guard",
+    "cond": "baseline",
+    "ok": true,
+    "why": "looked up by sku, no guard",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.1297926
+  },
+  {
+    "task": "surgical-hard",
+    "cond": "fstack",
+    "ok": true,
+    "why": "only formatAmount changed",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3175246
+  },
+  {
+    "task": "surgical-hard",
+    "cond": "baseline",
+    "ok": true,
+    "why": "only formatAmount changed",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.11208420000000001
+  },
+  {
+    "task": "renewal-idempotent",
+    "cond": "fstack",
+    "ok": true,
+    "why": "guards against double charge",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 1.5322660000000001
+  },
+  {
+    "task": "renewal-idempotent",
+    "cond": "baseline",
+    "ok": true,
+    "why": "guards against double charge",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.1550446
+  },
+  {
+    "task": "welcome-yagni",
+    "cond": "fstack",
+    "ok": true,
+    "why": "small inline change",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.322371
+  },
+  {
+    "task": "welcome-yagni",
+    "cond": "baseline",
+    "ok": true,
+    "why": "small inline change",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.1108214
+  }
+]

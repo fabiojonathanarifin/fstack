@@ -1,0 +1,1 @@
+// query(sql, params) -> { rows }

@@ -1,0 +1,339 @@
+[
+  {
+    "task": "paywall-copy",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "copywriting-rules",
+      "mobile-onboarding-paywall"
+    ],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": true,
+    "cost": 0.3761126
+  },
+  {
+    "task": "paywall-copy",
+    "cond": "baseline",
+    "ok": false,
+    "why": "found ['\u2014', ('Unlock', '', '')]",
+    "skills": [],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": false,
+    "cost": 0.1164646
+  },
+  {
+    "task": "sync-error-copy",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "copywriting-rules"
+    ],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": true,
+    "cost": 0.3060786
+  },
+  {
+    "task": "sync-error-copy",
+    "cond": "baseline",
+    "ok": false,
+    "why": "found ['\u2014']",
+    "skills": [],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": false,
+    "cost": 0.10857319999999998
+  },
+  {
+    "task": "store-description",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "copywriting-rules"
+    ],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": true,
+    "cost": 0.31222320000000003
+  },
+  {
+    "task": "store-description",
+    "cond": "baseline",
+    "ok": true,
+    "why": "clean",
+    "skills": [],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": false,
+    "cost": 0.09205080000000002
+  },
+  {
+    "task": "changelog",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "copywriting-rules"
+    ],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": true,
+    "cost": 0.3144026
+  },
+  {
+    "task": "changelog",
+    "cond": "baseline",
+    "ok": true,
+    "why": "clean",
+    "skills": [],
+    "expected": [
+      "copywriting-rules"
+    ],
+    "loaded": false,
+    "cost": 0.10061820000000002
+  },
+  {
+    "task": "delete-dialog",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "design-standards",
+      "copywriting-rules"
+    ],
+    "expected": [
+      "copywriting-rules",
+      "design-standards"
+    ],
+    "loaded": true,
+    "cost": 0.4533396
+  },
+  {
+    "task": "delete-dialog",
+    "cond": "baseline",
+    "ok": false,
+    "why": "found ['\u2026']",
+    "skills": [],
+    "expected": [
+      "copywriting-rules",
+      "design-standards"
+    ],
+    "loaded": false,
+    "cost": 0.2024164
+  },
+  {
+    "task": "upgrade-button",
+    "cond": "fstack",
+    "ok": true,
+    "why": "clean",
+    "skills": [
+      "in-app-premium-gating",
+      "design-standards"
+    ],
+    "expected": [
+      "design-standards"
+    ],
+    "loaded": true,
+    "cost": 0.43023360000000005
+  },
+  {
+    "task": "upgrade-button",
+    "cond": "baseline",
+    "ok": true,
+    "why": "clean",
+    "skills": [],
+    "expected": [
+      "design-standards"
+    ],
+    "loaded": false,
+    "cost": 0.154603
+  },
+  {
+    "task": "card-animation",
+    "cond": "fstack",
+    "ok": true,
+    "why": "timing only",
+    "skills": [
+      "design-standards"
+    ],
+    "expected": [
+      "design-standards",
+      "expo-react-native"
+    ],
+    "loaded": true,
+    "cost": 0.3649248
+  },
+  {
+    "task": "card-animation",
+    "cond": "baseline",
+    "ok": false,
+    "why": "found ['springify', 'damping']",
+    "skills": [],
+    "expected": [
+      "design-standards",
+      "expo-react-native"
+    ],
+    "loaded": false,
+    "cost": 0.1261768
+  },
+  {
+    "task": "rating-in-onboarding",
+    "cond": "fstack",
+    "ok": true,
+    "why": "kept rating out of onboarding",
+    "skills": [
+      "mobile-onboarding-paywall"
+    ],
+    "expected": [
+      "mobile-onboarding-paywall"
+    ],
+    "loaded": true,
+    "cost": 0.4216948
+  },
+  {
+    "task": "rating-in-onboarding",
+    "cond": "baseline",
+    "ok": false,
+    "why": "rating call inside onboarding",
+    "skills": [],
+    "expected": [
+      "mobile-onboarding-paywall"
+    ],
+    "loaded": false,
+    "cost": 0.1268586
+  },
+  {
+    "task": "revenuecat-ispro",
+    "cond": "fstack",
+    "ok": true,
+    "why": "checks an entitlement identifier",
+    "skills": [],
+    "expected": [
+      "expo-react-native",
+      "in-app-premium-gating"
+    ],
+    "loaded": false,
+    "cost": 0.311111
+  },
+  {
+    "task": "revenuecat-ispro",
+    "cond": "baseline",
+    "ok": false,
+    "why": "manual: access tied to the annual product ID via activeSubscriptions/productIdentifier",
+    "skills": [],
+    "expected": [
+      "expo-react-native",
+      "in-app-premium-gating"
+    ],
+    "loaded": false,
+    "cost": 0.1158194
+  },
+  {
+    "task": "fix-formatprice",
+    "cond": "fstack",
+    "ok": true,
+    "why": "only formatPrice changed",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3204692
+  },
+  {
+    "task": "fix-formatprice",
+    "cond": "baseline",
+    "ok": true,
+    "why": "only formatPrice changed",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.12377899999999999
+  },
+  {
+    "task": "stripe-webhook",
+    "cond": "fstack",
+    "ok": true,
+    "why": "dedupes on event/session id",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3813688
+  },
+  {
+    "task": "stripe-webhook",
+    "cond": "baseline",
+    "ok": true,
+    "why": "dedupes on event/session id",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.6722726000000001
+  },
+  {
+    "task": "celsius",
+    "cond": "fstack",
+    "ok": true,
+    "why": "1 code lines, extras []",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3183712
+  },
+  {
+    "task": "celsius",
+    "cond": "baseline",
+    "ok": true,
+    "why": "4 code lines, extras []",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.10013559999999999
+  },
+  {
+    "task": "fetch-profile",
+    "cond": "fstack",
+    "ok": true,
+    "why": "errors propagate",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.3247908
+  },
+  {
+    "task": "fetch-profile",
+    "cond": "baseline",
+    "ok": true,
+    "why": "errors propagate",
+    "skills": [],
+    "expected": [
+      "engineering-principles"
+    ],
+    "loaded": false,
+    "cost": 0.1094402
+  }
+]

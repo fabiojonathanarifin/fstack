@@ -34,6 +34,10 @@ Rules load themselves when the task calls for them. Checks wait for you to type 
 /plugin install fstack-mobile@fstack
 ```
 
+## Does it work?
+
+On 17 test tasks, Claude with fstack kept the rules on all 17. Plain Claude kept them on 11. It put a rating prompt inside onboarding, which Apple rejects, used em dashes and "Unlock" in paywall copy, and reached for spring animations. Full breakdown and method in [eval/RESULTS.md](eval/RESULTS.md). Rerun it yourself with `python3 eval/eval.py`.
+
 ## A few rules worth knowing
 
 - Apple rejects apps that ask for a rating during onboarding (guideline 5.6.3). Ask after the first real win, at least 8 hours after install.
