@@ -20,7 +20,7 @@ It works on any stack. The core plugin is product and stack agnostic. The mobile
 In Claude Code:
 
 ```
-/plugin marketplace add fabiojonathanarifin/foolstack
+/plugin marketplace add fabiojonathanarifin/fstack
 /plugin install foolstack@foolstack
 /plugin install foolstack-mobile@foolstack
 ```

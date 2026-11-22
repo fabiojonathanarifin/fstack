@@ -3,7 +3,7 @@
 ## Install
 
 ```
-/plugin marketplace add fabiojonathanarifin/foolstack
+/plugin marketplace add fabiojonathanarifin/fstack
 /plugin install foolstack@foolstack          # any codebase
 /plugin install foolstack-mobile@foolstack   # B2C mobile apps
 ```
