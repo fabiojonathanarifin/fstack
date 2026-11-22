@@ -14,6 +14,13 @@ Two plugins. Install one or both.
 | `design-standards` | designing any screen, flow or interaction |
 | `copywriting-rules` | writing anything a user reads |
 | `/in-your-own-words` | typing it, to check the agent understood your goal |
+| `blast-radius` | about to ship a change to money, auth, data or anything shared |
+| `decision-log` | running long or unattended work you'll review later |
+| `/create-verification-skill` | setting up a repo so agents can drive and prove the real app (web or mobile) |
+| `/maintain-verification-skill` | keeping that app's feature map accurate as it changes |
+| `/correct` | tired of correcting the same agent mistake; turns it into a lint, type or check |
+| `/reflect` | ending a session; turns its lessons into skill edits |
+| `/review-comments` | committing agent-written code; strips comments that don't earn their place |
 
 **`fstack-mobile`**: for B2C mobile apps.
 
@@ -62,7 +69,7 @@ Skills load on demand. If you want the core principles in every session, paste t
 
 ## Credits
 
-Several engineering principles are adapted from [pstack](https://github.com/cursor/plugins/tree/main/pstack). The `copywriting-rules` skill works best alongside [humanizer](https://github.com/blader/humanizer).
+Several engineering principles and the verification, correct, reflect, blast-radius and decision-log skills are adapted from [pstack](https://github.com/cursor/plugins/tree/main/pstack). The `copywriting-rules` skill works best alongside [humanizer](https://github.com/blader/humanizer).
 
 ## License
 
