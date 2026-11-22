@@ -132,7 +132,7 @@ def run(task, cond):
     if d.exists(): shutil.rmtree(d)
     shutil.copytree(E/'fixtures'/task['fx'], d)
     env = dict(os.environ) if KEEP_KEY else {k:v for k,v in os.environ.items() if k != 'ANTHROPIC_API_KEY'}
-    cmd = ['claude','-p',task['prompt']+SUFFIX,'--output-format','stream-json','--verbose','--permission-mode','acceptEdits',
+    cmd = ['claude','-p',task['prompt']+SUFFIX,'--no-session-persistence','--output-format','stream-json','--verbose','--permission-mode','acceptEdits',
            '--allowedTools','Read','Write','Edit','Glob','Grep','Skill','--disallowedTools','Bash','WebFetch','WebSearch']
     cmd += ['--safe-mode'] if cond == 'baseline' else ['--strict-mcp-config','--mcp-config','{"mcpServers":{}}']
     try:
