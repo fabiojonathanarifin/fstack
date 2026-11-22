@@ -84,18 +84,6 @@ what could this break? I changed how refunds are calculated
 
 Rules load themselves. Commands (the ones with a `/`) wait for you.
 
-## Does it work?
-
-I tested it. On 17 tasks, Claude with foolstack kept the rules on all 17. Plain Claude kept them on 11. It put a rating prompt inside onboarding, which Apple rejects. It used em dashes and "Unlock" in paywall copy. It reached for spring animations.
-
-The engineering tasks didn't separate the two, because today's models already handle the basics. The gap is product rules a model can't infer from code. Full breakdown in [eval/RESULTS.md](eval/RESULTS.md). Rerun it with `python3 eval/eval.py`.
-
-## A few rules worth stealing
-
-- Never ask for an App Store rating during onboarding. Apple rejects it (guideline 5.6.3). Ask after the first real win, at least 8 hours after install.
-- RevenueCat checks access by entitlement ID, not product ID. Get it wrong and every purchase succeeds while the user stays locked out.
-- A win-back offer should be a StoreKit promotional offer, not a cheaper public product that undercuts your full price.
-- When two fixes built on the same assumption both fail, test the assumption before writing a third.
 
 ## Always-on rules (optional)
 
