@@ -1,6 +1,6 @@
 # foolstack
 
-I'm Fabio. I build and run apps alone under EchoForge: Protos, Airlophone, ReadersGuild. No team. Just me and a lot of agents.
+I'm Fabio. I build and run multiple apps Protos, Airlophone, ReadersGuild, etc.
 
 Agents are great at code and bad at product. Mine wrote paywalls that said "Unlock premium" next to a sparkles icon. They checked the wrong RevenueCat ID, so people paid and stayed locked out. They reached for spring animations, em dashes and "seamless" in every headline. And Apple rejected one of my apps because a rule I'd written for my own agents told them to ask for a rating during onboarding.
 
