@@ -63,7 +63,7 @@ what could this break? I changed how refunds are calculated
 | `engineering-principles` | planning, debugging, refactoring or reviewing code |
 | `design-standards` | designing any screen, flow or interaction |
 | `copywriting-rules` | writing anything a user reads |
-| `blast-radius` | about to ship a change to money, auth, data or anything shared |
+| `blast-radius` | about to ship a risky change: payments, login, user data, database migrations |
 | `perf-investigation` | fixing anything slow: measure, change one thing, re-measure |
 | `decision-log` | running long or unattended work you'll review later |
 | `/in-your-own-words` | typing it, to check the agent understood your goal |

@@ -1,6 +1,6 @@
 ---
 name: blast-radius
-description: "Find what a change could break outside its own diff before it ships, and prove the one fact it's safe because of by running real code instead of writing it up. Use for /blast-radius, \"what could this break\", or before shipping a change to money, auth, data, migrations or anything shared."
+description: "Find what a change could break outside its own diff before it ships, and prove the one fact it's safe because of by running real code instead of writing it up. Use for /blast-radius, \"what could this break\", or before shipping a risky change: payments, login, user data, database migrations, or code other parts of the app depend on."
 ---
 
 # Blast radius

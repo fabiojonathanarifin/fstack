@@ -19,7 +19,7 @@ Two kinds of skills.
 
 1. Give the agent a task. If it's big or fuzzy, type `/in-your-own-words` first and confirm it understood.
 2. It builds, using the rules that apply.
-3. Before a change to money, auth, data or migrations ships, it runs `blast-radius` and proves the one fact the change is safe because of.
+3. Before a risky change ships (payments, login, user data, database migrations), it runs `blast-radius` and proves the one fact the change is safe because of.
 4. For UI work, it proves the result in the running app with your project's verify skill and shows you the screenshots.
 5. At the end of a long session, type `/reflect`. It proposes skill edits from what went wrong, and you approve them.
 
