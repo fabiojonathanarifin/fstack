@@ -51,6 +51,15 @@ Single biggest cause of copy that "feels off." If you've written any of these, r
 
 If a sentence works without these words, the rewrite is the answer.
 
+### Titles and headlines: plain, one line, say the thing
+
+- A title names the feature or the problem it solves, in plain words. "Bible maps for every story" beats "Read the Bible where it happened."
+- Never be clever. No slogans, no poetic statements, no wordplay, no mystery. If a reader can't tell what the section is about from the title alone, rewrite it.
+- One clean line. No comma, no colon, no dash, no two-part "X. Y." construction, no "and" chaining two ideas.
+- Lead with the pain or the job when it helps: "See where each story happened" over "A map of the ancient world."
+- Short: aim for 3 to 7 words.
+- Applies everywhere: app screens, press pages, changelogs, store listings, emails, decks.
+
 ### Voice and structure
 
 - Write like a human texting a friend who happens to be smart. Short sentences. Direct. No filler.
